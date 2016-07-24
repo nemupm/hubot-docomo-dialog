@@ -1,0 +1,22 @@
+{
+  "name": "hubot-docomo-dialog",
+  "version": "0.0.1",
+  "description": "",
+  "main": "scripts/docomo-dialog-api.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nemupm/hubot-docomo-dialog.git"
+  },
+  "author": "nemupm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nemupm/hubot-docomo-dialog/issues"
+  },
+  "homepage": "https://github.com/nemupm/hubot-docomo-dialog",
+  "dependencies": {
+    "request": "^2.74.0"
+  }
+}
