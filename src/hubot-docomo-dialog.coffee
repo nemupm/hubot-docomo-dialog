@@ -17,6 +17,10 @@ module.exports = (robot) ->
     message = msg.match[1]
     return unless DOCOMO_API_KEY && message
 
+    ## Character Type
+    ##  20: kansai dialect, 30: baby
+    CHARACTER_TYPE = process.env.CHARACTER_TYPE
+
     ## ContextIDを読み込む
     KEY_DOCOMO_CONTEXT = 'docomo-talk-context'
     context = robot.brain.get KEY_DOCOMO_CONTEXT || ''
@@ -39,6 +43,7 @@ module.exports = (robot) ->
       url: url
       json:
         utt: message
+        t: CHARACTER_TYPE
         nickname: user_name if user_name
         context: context if context
       , (err, response, body) ->
